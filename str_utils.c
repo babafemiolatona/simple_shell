@@ -14,7 +14,7 @@ int _strlen(char *s)
 		return (0);
 	}
 	for (len = 0; s[len] != '\0'; len++)
-;
+		;
 	return (len);
 }
 
@@ -90,10 +90,10 @@ void _printstr(char *s, int n)
 	}
 	for (ret = 0; s[ret] != '\0'; ret++)
 	{
-		write(STDOUT_FILE NO, &s[ret], 1);
+		write(STDOUT_FILENO, &s[ret], 1);
 	}
 	if (n == 0)
 	{
-		write(STDOUT_FILE NO, "\n", 1);
+		write(STDOUT_FILENO, "\n", 1);
 	}
 }

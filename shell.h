@@ -1,6 +1,7 @@
 #ifndef _SHELL_H
 #define _SHELL_H
 
+#include <stddef.h>
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -11,6 +12,7 @@
 #include <dirent.h>
 #include <sys/wait.h>
 #include <sys/stat.h>
+#define PROMPT "pegasus $ "
 
 /**
 * struct builtin - structure representing a built-in command and
@@ -32,10 +34,21 @@ int _strcmp(char *, char *);
 char *_strdup(char *);
 void _printstr(char *, int);
 int print_num(int nin);
+
 void free_db(char **);
 void free_sng(int, ...);
 void print_err(char *, int, char *);
 void handle_exec_error(char *, int, char *);
+char **split_str(int, char *, const char *);
+char **int_token(char *, const char *, int);
+int countToken(char *, const char *);
+void line_format(char *, size_t, int, char **);
+void spawn_process(char **, char *, int, char **);
+char *create_path(char *, char *);
+char *search_dir(char **, char *);
+char **tokenize_path(int, char *);
+char *path_finder(char *);
+int locate_path(char *);
 
 void (*builtin_handler(char *))(char *);
 void cmd_env(char *);

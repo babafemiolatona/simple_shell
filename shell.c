@@ -3,14 +3,14 @@
 /**
  * main - Entry point of the program.
  * @argc: argument count
- * @argv: argument vector
+ * @ret: argument vector
  * Return: Always 0.
  */
 
-int main(__attribute__((unused)) int argc, char **argv)
+int main(__attribute__((unused)) int argc, char **ret)
 {
-	char *input_line;
-	size_t line_size;
+	char *line;
+	size_t size;
 	int cmdCount;
 
 	cmdCount = 0;
@@ -18,9 +18,9 @@ int main(__attribute__((unused)) int argc, char **argv)
 	while (1)
 	{
 		cmdCount++;
-		input_line = NULL;
-		line_size = 0;
-		line_format(input_line, line_size, cmdCount, argv);
+		line = NULL;
+		size = 0;
+		line_format(line, size, cmdCount, ret);
 	}
 	return (0);
 }

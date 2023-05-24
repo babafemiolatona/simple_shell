@@ -75,7 +75,7 @@ void spawn_process(char **args_array, char *line, int cmdCount, char **ret)
 				for (index = 1; args_array[index]; index++)
 					free(args_array[index]);
 				free(args_array);
-				exit(100);
+				exit(0);
 			}
 			cmd = tmpCmd;
 		}
@@ -89,4 +89,3 @@ void spawn_process(char **args_array, char *line, int cmdCount, char **ret)
 	else
 		wait(&status);
 }
-

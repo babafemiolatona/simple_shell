@@ -12,7 +12,7 @@ void handle_exec_error(char *args, int len, char *cmd)
 	print_err(args, len, cmd);
 	_printstr(": ", 1);
 	perror("");
-	exit(1);
+	exit(0);
 }
 
 /**

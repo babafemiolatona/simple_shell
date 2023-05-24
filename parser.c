@@ -39,7 +39,7 @@ void line_format(char *line, size_t size, int cmdCount, char **ret)
 	}
 	else
 	{
-		cmd_exit(line);
+		exit(EXIT_SUCCESS);
 	}
 }
 

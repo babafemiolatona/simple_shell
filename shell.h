@@ -12,7 +12,7 @@
 #include <dirent.h>
 #include <sys/wait.h>
 #include <sys/stat.h>
-#define PROMPT "pegasus $ "
+#define PROMPT "$ "
 
 /**
 * struct builtin - structure representing a built-in command and
@@ -49,6 +49,7 @@ char *search_dir(char **, char *);
 char **tokenize_path(int, char *);
 char *path_finder(char *);
 int locate_path(char *);
+void cmd_cd(char *);
 
 void (*builtin_handler(char *))(char *);
 void cmd_env(char *);

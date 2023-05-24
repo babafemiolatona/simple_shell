@@ -13,6 +13,7 @@ void (*builtin_handler(char *s))(char *s)
 	builtin_res beta[] = {
 		{"env", cmd_env},
 		{"exit", cmd_exit},
+		{"cd", cmd_cd},
 		{NULL, NULL}
 	};
 

@@ -28,5 +28,5 @@ void cmd_exit(char *line)
 {
 	free(line);
 	_printstr("\n", 1);
-	exit(1);
+	exit(0);
 }

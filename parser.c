@@ -20,7 +20,10 @@ void line_format(char *line, size_t size, int cmdCount, char **ret)
 	const char *delim = "\n\t ";
 
 	token_iterator = 0;
-	write(STDOUT_FILENO, PROMPT, _strlen(PROMPT));
+	if (isatty(STDIN_FILENO))
+	{
+		write(STDOUT_FILENO, PROMPT, _strlen(PROMPT));
+	}
 	read_len = getline(&line, &size, stdin);
 	if (read_len != -1)
 	{

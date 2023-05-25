@@ -38,10 +38,13 @@ void line_format(char *line, size_t size, int cmdCount, char **ret)
 			spawn_process(args_array, line, cmdCount, ret);
 		for (i = 0; args_array[i] != NULL; i++)
 			free(args_array[i]);
-		free_sng(2, args_array, line);
+		free(args_array);
+		free(line);
+		/*free_sng(2, args_array, line);*/
 	}
 	else
 	{
+		free(line);
 		exit(EXIT_SUCCESS);
 	}
 }

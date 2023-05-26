@@ -27,7 +27,7 @@ void cmd_env(__attribute__((unused))char *s)
 void cmd_exit(char *line)
 {
 	free(line);
-	_printstr("\n", 1);
+	_printstr("", 1);
 	exit(0);
 }
 

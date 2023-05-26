@@ -28,7 +28,7 @@ void cmd_exit(char *line)
 {
 	free(line);
 	_printstr("", 1);
-	exit(0);
+	exit(2);
 }
 
 /**
